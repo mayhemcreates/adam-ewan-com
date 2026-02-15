@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-vibes: "Great Vibes", cursive;
+  --font-typewriter: "Special Elite", system-ui;
+  --color-lemon: #efde4f;
+}
+
+.link {
+  @apply hover:text-white transition-colors delay-300 ease-in;
+}
