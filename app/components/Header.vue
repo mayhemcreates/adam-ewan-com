@@ -6,6 +6,10 @@ const isOpen = ref(false);
 const openNav = () => {
   isOpen.value = !isOpen.value;
 };
+
+const closeNav = () => {
+  isOpen.value = false;
+};
 </script>
 
 <template>
@@ -16,11 +20,11 @@ const openNav = () => {
       <div class="absolute lg:static left-0 top-0 lg:translate-x-0 w-screen h-screen z-50 lg:w-auto lg:h-auto bg-black lg:bg-transparent" :class="isOpen ? 'translate-x-0' : 'translate-x-full'">
         <nav class="h-full lg:h-auto">
           <ul class="flex h-full flex-col lg:flex-row items-center lg:justify-end mt-20 lg:mt-0 gap-y-5 lg:gap-y-0 lg:gap-x-5 text-lemon">
-            <NuxtLink to="/about" class="link" active-class="text-white border-b-2 border-white">About</NuxtLink>
-            <NuxtLink to="/biography" class="link" active-class="text-white border-b-2 border-white">Biography</NuxtLink>
-            <NuxtLink to="/gallery" class="link" active-class="text-white border-b-2 border-white">Gallery</NuxtLink>
-            <NuxtLink to="/showreel" class="link" active-class="text-white border-b-2 border-white">Showreel</NuxtLink>
-            <NuxtLink to="/contact" class="link" active-class="text-white border-b-2 border-white">Contact</NuxtLink>
+            <NuxtLink to="/about" class="link" active-class="text-white border-b-2 border-white" @click="closeNav">About</NuxtLink>
+            <NuxtLink to="/biography" class="link" active-class="text-white border-b-2 border-white" @click="closeNav">Biography</NuxtLink>
+            <NuxtLink to="/gallery" class="link" active-class="text-white border-b-2 border-white" @click="closeNav">Gallery</NuxtLink>
+            <NuxtLink to="/showreel" class="link" active-class="text-white border-b-2 border-white" @click="closeNav">Showreel</NuxtLink>
+            <NuxtLink to="/contact" class="link" active-class="text-white border-b-2 border-white" @click="closeNav">Contact</NuxtLink>
           </ul>
         </nav>
       </div>
